@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  {% include 'snippets/css.html' %}
+
+  <link href='http://fonts.googleapis.com/css?family=' rel='stylesheet' type='text/css'>
+	<!-- 1140px Grid styles for IE -->
+	<!--[if lte IE 9]><link rel="stylesheet" href="{{ STATIC_URL }}css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+  <title>{% block title %}{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}{% endblock %}</title>
+
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="<3">
+
+  <!-- todo: favicon.ico and apple-touch-icon.png -->
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <header>
+
+  </header>
+
+  <div id="container">
+    {% block content %}
+    {% endblock %}
+  </div> <!--! end of #container -->
+
+  <footer>
+    {% block footer %}
+    {% endblock %}
+  </footer>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+  {% include 'snippets/js.html' %}
+
+</body>
+</html>
