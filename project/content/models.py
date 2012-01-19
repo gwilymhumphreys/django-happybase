@@ -24,5 +24,3 @@ class Page(NamedModel):
     content             = models.TextField(null=True, blank=True)
 
     class Meta:
-        abstract = True
-
