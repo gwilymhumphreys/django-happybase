@@ -9,5 +9,5 @@
 log/
 backups/
 project/*/migrations/
-site-media/media/
-site-media/static/
+public/media/
+public/static/

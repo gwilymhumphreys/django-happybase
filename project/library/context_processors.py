@@ -1,5 +1,6 @@
 from django.conf import settings as _settings
 from project.content.models import SiteSettings
+import constants
 
 
 def settings(request):
@@ -13,7 +14,9 @@ def settings(request):
 
     return {
         'settings': _settings,
-#        'STATIC_URL': _settings.STATIC_URL,
+        'constants': constants,
+        'MEDIA_URL': _settings.MEDIA_URL,
+        'STATIC_URL': _settings.STATIC_URL,
         'site': site_settings,
     }
 

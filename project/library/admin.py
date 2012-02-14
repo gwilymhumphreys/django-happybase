@@ -10,8 +10,9 @@ class TinymceMixin():
         ]
 
 class NamedModelAdmin(admin.ModelAdmin, TinymceMixin):
-    prepopulated_fields = {'slug': ('title',)}
+    exclude = ('slug', )
+    search_fields = ('name', )
 
 
 class NamedModelInline(admin.TabularInline):
-    prepopulated_fields = {'slug': ('title',)}
+    exclude = ('slug', )

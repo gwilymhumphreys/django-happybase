@@ -1,0 +1,3 @@
+
+def CustomerNotValidated(Exception):
+    pass
