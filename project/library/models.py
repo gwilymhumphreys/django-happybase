@@ -1,7 +1,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext as _
-from library.constants import VISIBILITY_CHOICES
 
 
 class BaseModel(models.Model):
@@ -53,7 +52,7 @@ class ContentModel(BaseModel):
     """
     title           = models.CharField(_('Title'), max_length=200)
     slug            = models.SlugField(_('Slug'), max_length=200)
-    visibility      = models.CharField(_('Visibility'), max_length=50, default='everyone', choices=VISIBILITY_CHOICES)
+    visible      = models.CharField(_('Visible'))
     content         = models.TextField(_('Content'), null=True, blank=True)
 
     class Meta:
