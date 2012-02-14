@@ -2,32 +2,38 @@ from django.db import models
 
 
 class BaseModel(models.Model):
+    """
+    Basic model
+    """
     created     = models.DateTimeField(auto_now_add=True, editable=False)
     modified    = models.DateTimeField(auto_now=True, editable=False)
+    modified    = models.DateTimeField(auto_now=True, editable=False)
+    visible     = models.BooleanField(default=True)
 
     class Meta:
         abstract = True
 
 
 class NamedModel(BaseModel):
-    name            = models.CharField(max_length=50)
+    """
+    Basic model with a title and slug
+    """
+    title           = models.CharField(max_length=50)
     slug            = models.SlugField(max_length=50)
 
     class Meta:
         abstract = True
-        ordering = ('name', )
+        ordering = ('title', )
 
     def __unicode__(self):
-        return self.name
-
-    def _get_isotope_tag(self):
-        return '%s' % self.slug
-    isotope_tag = property(_get_isotope_tag)
+        return self.title
 
 
 class OrderedNamedModel(NamedModel):
-
-    order           = models.IntegerField(null=True, blank=True, )
+    """
+    Named model with an ordering field
+    """
+    order           = models.PositiveIntegerField(null=True, blank=True, )
 
     class Meta:
         abstract = True

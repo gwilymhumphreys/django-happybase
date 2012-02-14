@@ -4,5 +4,5 @@
 {% block body_class %}page{% endblock %}
 
 {% block content %}
-  {{ page.content }}
+  {{ page.content|safe }}
 {% endblock %}

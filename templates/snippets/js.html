@@ -1,15 +1,15 @@
 {% load compress %}
 
+
 {% compress js %}
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="{{ STATIC_URL }}js/jquery-1.7.1.min.js"></script>
+  <script src="{{ STATIC_URL }}bootstrap/js/bootstrap.min.js"></script>
   <script src="{{ STATIC_URL }}js/site.js"></script>
 {% endcompress %}
 
-<!-- TODO: Change UA-XXXXX-X to be your site's ID -->
+
+{# analytics code goes here #}
 <script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-        load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
+
 </script>
 
