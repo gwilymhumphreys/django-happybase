@@ -64,7 +64,7 @@ class ContentModel(BaseModel):
     """
     title           = models.CharField(_('Title'), max_length=200)
     slug            = models.SlugField(_('Slug'), max_length=200)
-    visible      = models.CharField(_('Visible'))
+    visible         = models.BooleanField(_('Visible'))
     content         = models.TextField(_('Content'), null=True, blank=True)
 
     class Meta:
