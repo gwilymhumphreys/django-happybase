@@ -1,0 +1,8 @@
+{% load compress %}
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+
+{% compress css %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+{% endcompress %}
