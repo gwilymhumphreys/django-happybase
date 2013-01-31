@@ -1,13 +1,8 @@
 *.pyc
 .idea/
-.idea/*
-./idea/gradcon.iml
-./idea/gradcon.iml
-./idea/inspectionProfiles/*
-./idea/inspectionProfiles/profile_settings.xml
-./idea/inspectionProfiles/Project_Default.xml
-log/
 backups/
+design/
+log/
 project/*/migrations/
 public/media/
 public/static/

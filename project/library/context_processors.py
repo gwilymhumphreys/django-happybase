@@ -1,4 +1,5 @@
 from django.conf import settings as _settings
+from project.content.models import SiteSettings
 
 
 def settings(request):

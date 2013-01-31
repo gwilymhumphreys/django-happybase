@@ -14,18 +14,6 @@ class BaseModel(models.Model):
         abstract = True
 
 
-class SiteSettings(BaseModel):
-    """
-    General site settings
-    """
-    title           = models.CharField(max_length=50)
-    heading         = models.CharField(max_length=50)
-    description     = models.CharField(max_length=200)
-
-    def __unicode__(self):
-        return self.title
-
-
 class NamedModel(BaseModel):
     """
     Basic model with a name and slug
